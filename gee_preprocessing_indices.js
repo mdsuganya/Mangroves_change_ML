@@ -16,32 +16,6 @@ function maskS2clouds(image) {
 var S2 = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
   .filterBounds (Bhitar);
   
-//   var filtered = S2
-//   .filterDate ('2024-01-01', '2024-12-30')
-//   .filter (ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 20))
-//   .filterBounds (Bhitar)
-//   .map(maskS2clouds);
-//   // .map(addIndicesS2);
-  
-// var composite = filtered.median ();
-
-// var clipped = composite.clip(Bhitar);
-
-// var visbandsfcc = {bands: ['B6', 'B4', 'B3'], min : 0, max :0.3};
-              
-// Map.addLayer(clipped, visbandsfcc, 'Sentinel 2024');
-// Map.centerObject (Bhitar, 10);
-
-// Export.image.toDrive({
-//   image: clipped,
-//   description: 'Sentinel 2024',
-//   region: AOI,
-//   scale: 10,
-//   crs: 'EPSG:32644',
-//   maxPixels: 1e13,
- 
-// });
-
 //Add spectral indices
 var addIndicesS2 = function(img){
   var ndvi = img.normalizedDifference(['B8', 'B4']).rename('NDVI');
@@ -255,16 +229,8 @@ var compositeNew = composite
                         // .updateMask(NDMIMask)
                         .updateMask(elevationMask)
 var compositefloat = composite.toFloat()
-// Export.image.toDrive({
-//   image: compositefloat,
-//   description: 'Sentinel_2024',
-//   region: Bhitar,
-//   scale: 30,
-//   crs: 'EPSG:32645',
-//   maxPixels: 1e13,
- 
-// });                       
-                        
+        
+                      
 //2.7) Display results
 //////////////////////                       
 //Select bands and parameters for visualization
