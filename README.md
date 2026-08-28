@@ -1,6 +1,6 @@
 # Mangroves_change_ML
 Mangroves change detection using GEE 
-# Multi-Temporal Mangrove Dynamics & GeoAI Frameworks: Bhitarkanika Case Study
+# Multi-Temporal Mangrove Dynamics & GeoAI Frameworks: 
 
 An advanced Earth Observation (EO) research repository demonstrating the integration of traditional remote sensing feature engineering with modern deep learning optimization pipelines for fragile coastal ecosystem monitoring.
 
