@@ -1,4 +1,4 @@
-# Mangroves_change_ML
+# Mangroves_change_Machine Learning
 Mangroves change detection using GEE 
 # Multi-Temporal Mangrove Dynamics & GeoAI Frameworks: 
 
